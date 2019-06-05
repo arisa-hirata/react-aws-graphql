@@ -33,5 +33,63 @@ header button {
 main {
   width: calc(100% - 164px);
   border-left: 1px solid #d6d9dc;
-  min-height: calc(100vh - 42px);
+  min-height: calc(100vh - 60px);
+  padding: 2em 6em;
+}
+
+/* Parts */
+/* Topic */
+.topic-container-comment {
+  display: flex;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  margin-bottom: 20px;
+}
+.topic-container-comment .comment {
+  text-align: center;
+  padding: 0 10px;
+  align-self: center;
+}
+.topic-container-comment .info {
+  text-align: right;
+}
+.topic-container-comment .info .image {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: grey;
+}
+.topic-container-comment .topic-box-content {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+.topic-box-content i {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+}
+.topic-box-content i:hover {
+  cursor: pointer;
+}
+.topic-box-content ul {
+  padding: 0;
+}
+
+/* Pages */
+/* main */
+.create-button {
+  clear: both;
+  overflow: hidden;
+}
+/* User page */
+.user-page .image {
+  width: 250px;
+  height: 250px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.user-page h2 {
+  text-align: center;
 }
