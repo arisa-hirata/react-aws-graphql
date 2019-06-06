@@ -14,11 +14,7 @@ const Header = () => {
         <div className='right menu'>
           <div className='ui search'>
             <div className='ui icon input'>
-              <input
-                className='prompt'
-                type='text'
-                placeholder='Common passwords...'
-              />
+              <input className='prompt' type='text' placeholder='Search...' />
               <i className='search icon' />
             </div>
             {/* DROP DOWN */}

@@ -123,12 +123,6 @@ main {
   margin-bottom: 10px;
   font-weight: bold;
 }
-.topic .ui.form label {
-  border: 1px solid rgba(34, 36, 38, 0.1);
-  border-bottom: none;
-  margin-bottom: 0;
-  padding: 10px;
-}
 .topic .ui.form textarea {
   border-radius: 0;
   margin-bottom: 20px;
@@ -136,4 +130,37 @@ main {
 .topic .ui.form button {
   margin: 0 auto;
   display: block;
+}
+/* Sign Up */
+.ui.labeled.input {
+  margin-bottom: 20px;
+}
+.ui.labeled.input .ui.label {
+  background-color: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.1);
+}
+.ui.labeled.input .ui.label > .icon {
+  margin: 0;
+}
+/* Sign up & Login */
+.input-form {
+  text-align: center;
+}
+.input-form .ui.input > input {
+  max-width: 350px !important;
+  width: 350px;
+}
+.ui.form.textarea label {
+  border-radius: 0;
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.ui.form textarea {
+  border-radius: 0;
+}
+.one-column button {
+  display: block !important;
+  margin: 0 auto !important;
 }

@@ -29,7 +29,7 @@ const Topic = () => {
           }
         />
       </div>
-      <div className='ui form'>
+      <div className='ui form textarea'>
         <div className='field'>
           <label>
             <i className='pencil alternate icon' />
