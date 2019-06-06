@@ -5,12 +5,12 @@ const Header = () => {
   return (
     <header>
       <div className='ui secondary pointing menu container'>
-        <a className='item'>
+        <Link to='/' className='item'>
           <h1>
             <i className='paw icon' />
             Pawpaw
           </h1>
-        </a>
+        </Link>
         <div className='right menu'>
           <div className='ui search'>
             <div className='ui icon input'>
@@ -37,7 +37,9 @@ const Header = () => {
             </div> */}
           </div>
           <button className='positive ui button'>Sign out</button>
-          <div className='user' />
+          <Link to='/user' className='user'>
+            <div />
+          </Link>
         </div>
       </div>
     </header>

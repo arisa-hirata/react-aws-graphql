@@ -17,7 +17,7 @@ const CreateTopic = () => {
           <label>Tag</label>
           <textarea />
         </div>
-        <button class='positive ui button'>Create</button>
+        <button className='positive ui button center'>Create</button>
       </div>
     </OneColumn>
   );

@@ -16,6 +16,26 @@ const TopicList = ({ title, topics }) => {
           />
         }
       />
+      <TopicContainerWithComment
+        numberOfComent={5}
+        content={
+          <TopicBoxContent
+            body={header('question')}
+            tags={['dog', 'cat', 'mouse']}
+            info={info('May 27, 2019 23:43', 'User name')}
+          />
+        }
+      />
+      <TopicContainerWithComment
+        numberOfComent={5}
+        content={
+          <TopicBoxContent
+            body={header('question')}
+            tags={['dog', 'cat', 'mouse']}
+            info={info('Jun 1, 2019 23:43', 'User name')}
+          />
+        }
+      />
     </React.Fragment>
   );
 };

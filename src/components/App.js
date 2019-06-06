@@ -19,15 +19,31 @@ const App = () => {
           <Route path='/signup' component={SignUp} />
           <Route path='/login' component={LogIn} />
           <Route path='/create-topic' component={CreateTopic} />
-          <TwoColumn>
-            <Route path='/topic' component={Topic} />
-            <Route path='/user' component={User} />
-            <Route
-              path='/'
-              exact
-              render={() => <TopicList title='Top Topics' />}
-            />
-          </TwoColumn>
+          <Route
+            path='/topic'
+            render={() => (
+              <TwoColumn>
+                <Topic />
+              </TwoColumn>
+            )}
+          />
+          <Route
+            path='/user'
+            render={() => (
+              <TwoColumn>
+                <User />
+              </TwoColumn>
+            )}
+          />
+          <Route
+            path='/'
+            exact
+            render={() => (
+              <TwoColumn>
+                <TopicList title='Top Topics' />
+              </TwoColumn>
+            )}
+          />
         </Route>
       </BrowserRouter>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import TwoColumn from './TwoColumn';
 import TopicBoxContent from './TopicBoxContent';
 import CommentBox from './CommentBox';
 
@@ -37,7 +36,7 @@ const Topic = () => {
             Comment
           </label>
           <textarea />
-          <button class='positive ui button'>Send</button>
+          <button className='positive ui button'>Send</button>
         </div>
       </div>
     </div>
