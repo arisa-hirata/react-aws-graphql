@@ -39,6 +39,9 @@ main {
 
 /* Parts */
 /* Topic */
+.topic-box-content .info {
+  text-align: right;
+}
 .topic-container-comment {
   display: flex;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -48,9 +51,6 @@ main {
   text-align: center;
   padding: 0 10px;
   align-self: center;
-}
-.topic-container-comment .info {
-  text-align: right;
 }
 .topic-container-comment .info .image {
   display: inline-block;
@@ -92,4 +92,48 @@ main {
 }
 .user-page h2 {
   text-align: center;
+}
+/* Topic page */
+.topic-box {
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  margin-bottom: 30px;
+}
+.topic-box h2 {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+  margin-bottom: 0;
+  padding: 10px 20px;
+}
+.topic-box .topic-box-content {
+  padding: 20px;
+}
+.topic .comments {
+  margin-bottom: 30px;
+}
+.topic .comment-box {
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  padding: 10px;
+}
+.topic .comment-box:last-child {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+.topic .comment-box .topic-box-content {
+  padding: 0 20px;
+}
+.topic .comment-box .user {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.topic .ui.form label {
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.topic .ui.form textarea {
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+.topic .ui.form button {
+  margin: 0 auto;
+  display: block;
 }
