@@ -5,6 +5,9 @@ import SignUp from './SignUp';
 import LogIn from './LogIn';
 import CreateTopic from './CreateTopic';
 import TwoColumn from './TwoColumn';
+import Topic from './Topic';
+import User from './User';
+import TopicList from './TopicList';
 import './App.css';
 
 const App = () => {
@@ -13,10 +16,18 @@ const App = () => {
       <BrowserRouter>
         <Route>
           <Header />
-          {/* <SignUp /> */}
-          {/* <LogIn /> */}
-          <CreateTopic />
-          {/* <TwoColumn /> */}
+          <Route path='/signup' component={SignUp} />
+          <Route path='/login' component={LogIn} />
+          <Route path='/create-topic' component={CreateTopic} />
+          <TwoColumn>
+            <Route path='/topic' component={Topic} />
+            <Route path='/user' component={User} />
+            <Route
+              path='/'
+              exact
+              render={() => <TopicList title='Top Topics' />}
+            />
+          </TwoColumn>
         </Route>
       </BrowserRouter>
     </div>

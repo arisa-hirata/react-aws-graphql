@@ -1,4 +1,5 @@
 import React from 'react';
+import TwoColumn from './TwoColumn';
 import TopicBoxContent from './TopicBoxContent';
 import CommentBox from './CommentBox';
 
