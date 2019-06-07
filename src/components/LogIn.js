@@ -4,7 +4,7 @@ import OneColumn from './OneColumn';
 const LogIn = () => {
   return (
     <OneColumn title='Log In'>
-      <div className='input-form'>
+      <div className='log-in input-form'>
         <div className='ui labeled input'>
           <label htmlFor='email' className='ui label'>
             <i className='mail icon' />
@@ -20,7 +20,7 @@ const LogIn = () => {
         </div>
         <br />
         <button className='positive ui button'>Log In</button>
-        <div>
+        <div className='to-signup'>
           You don't have account?{' '}
           <button className='positive ui button'>Sign Up</button>
         </div>

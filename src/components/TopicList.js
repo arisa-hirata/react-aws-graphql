@@ -4,7 +4,7 @@ import TopicContainerWithComment from './TopicContainerWithComment';
 
 const TopicList = ({ title, topics }) => {
   return (
-    <React.Fragment>
+    <div className='topic-list'>
       <h2>{title}</h2>
       <TopicContainerWithComment
         numberOfComent={5}
@@ -36,7 +36,7 @@ const TopicList = ({ title, topics }) => {
           />
         }
       />
-    </React.Fragment>
+    </div>
   );
 };
 

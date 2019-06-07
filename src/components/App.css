@@ -1,3 +1,9 @@
+/* breakpoints */
+/* below 768px
+   768px - 991px
+   992px - 1200px	
+   above 1200px */
+
 header {
   border-bottom: 2px solid rgba(34, 36, 38, 0.15);
   position: fixed;
@@ -48,6 +54,20 @@ main {
   min-height: calc(100vh - 62px);
   padding: 2em 6em;
 }
+@media only screen and (max-width: 767px) {
+  main {
+    width: 100%;
+    border-left: none;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  main {
+    padding: 20px;
+  }
+}
 
 /* Parts */
 /* Topic */
@@ -87,6 +107,10 @@ main {
 .topic-box-content ul {
   padding: 0;
 }
+.topic-box-content .name {
+  font-weight: bold;
+  margin-left: 15px;
+}
 
 /* Pages */
 /* One column */
@@ -96,6 +120,9 @@ main {
 }
 .two-column {
   padding-top: 62px;
+}
+.one-column h2 {
+  margin-bottom: 50px;
 }
 /* main */
 .create-button {
@@ -114,6 +141,9 @@ main {
   text-align: center;
 }
 /* Topic page */
+.topic {
+  margin-top: 30px;
+}
 .topic-box {
   border: 1px solid rgba(34, 36, 38, 0.1);
   margin-bottom: 30px;
@@ -151,9 +181,49 @@ main {
   margin: 0 auto;
   display: block;
 }
-/* Sign Up */
-.ui.labeled.input {
+/* Topic List page */
+.topic-list {
+  margin-top: -30px;
+}
+.topic-list h2 {
   margin-bottom: 20px;
+}
+/* Log In */
+.log-in .to-signup {
+  margin-top: 30px;
+}
+.log-in .to-signup button {
+  margin-left: 15px;
+}
+/* form */
+button.center {
+  display: block !important;
+  margin: 0 auto !important;
+}
+.input-form {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.input-form
+  .ui.labeled.input:not([class*='corner labeled'])
+  .label:first-child {
+  width: 40px;
+}
+.input-form .ui.labeled.input {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.login .input-form .ui.labeled.input {
+  margin-bottom: 150px;
+}
+.input-form .ui.input > input {
+  max-width: calc(100% - 40px) !important;
+  width: calc(100% - 40px) !important;
+}
+.ui.form textarea,
+.ui.form input {
+  border-radius: 0 !important;
 }
 .ui.labeled.input .ui.label {
   background-color: #fff;
@@ -162,26 +232,10 @@ main {
 .ui.labeled.input .ui.label > .icon {
   margin: 0;
 }
-/* Sign up & Login */
-.input-form {
-  text-align: center;
-}
-.input-form .ui.input > input {
-  max-width: 350px !important;
-  width: 350px;
-}
 .ui.form.textarea label {
   border-radius: 0;
   border: 1px solid rgba(34, 36, 38, 0.1);
   border-bottom: none;
   margin-bottom: 0;
   padding: 10px;
-}
-.ui.form textarea,
-.ui.form input {
-  border-radius: 0 !important;
-}
-button.center {
-  display: block !important;
-  margin: 0 auto !important;
 }
