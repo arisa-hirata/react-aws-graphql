@@ -1,0 +1,241 @@
+/* breakpoints */
+/* below 768px
+   768px - 991px
+   992px - 1200px	
+   above 1200px */
+
+header {
+  border-bottom: 2px solid rgba(34, 36, 38, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+header .ui.secondary.pointing.menu {
+  border: none;
+  vertical-align: bottom;
+}
+header .right.menu {
+  padding-bottom: 12px;
+}
+header .user {
+  width: 38px;
+  height: 38px;
+  background-color: grey;
+  border-radius: 50%;
+}
+header .search,
+header button,
+header .user {
+  align-self: flex-end;
+}
+header button {
+  height: 38px;
+  margin: 0 20px !important;
+}
+.two-column {
+  display: flex !important;
+  justify-content: space-between;
+}
+.sidebar {
+  width: 164px;
+  padding: 20px;
+}
+.sidebar button {
+  width: 100%;
+  display: block !important;
+  margin-bottom: 10px !important;
+}
+main {
+  width: calc(100% - 164px);
+  border-left: 1px solid #d6d9dc;
+  min-height: calc(100vh - 62px);
+  padding: 2em 6em;
+}
+@media only screen and (max-width: 767px) {
+  main {
+    width: 100%;
+    border-left: none;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  main {
+    padding: 20px;
+  }
+}
+
+/* Parts */
+/* Topic */
+.topic-box-content .info {
+  text-align: right;
+}
+.topic-container-comment {
+  display: flex;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  margin-bottom: 20px;
+}
+.topic-container-comment .comment {
+  text-align: center;
+  padding: 0 10px;
+  align-self: center;
+}
+.topic-container-comment .info .image {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: grey;
+}
+.topic-container-comment .topic-box-content {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+.topic-box-content i {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+}
+.topic-box-content i:hover {
+  cursor: pointer;
+}
+.topic-box-content ul {
+  padding: 0;
+}
+.topic-box-content .name {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+/* Pages */
+/* One column */
+.one-column {
+  padding: 50px;
+  padding-top: 112px;
+}
+.two-column {
+  padding-top: 62px;
+}
+.one-column h2 {
+  margin-bottom: 50px;
+}
+/* main */
+.create-button {
+  clear: both;
+  overflow: hidden;
+}
+/* User page */
+.user-page .image {
+  width: 250px;
+  height: 250px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.user-page h2 {
+  text-align: center;
+}
+/* Topic page */
+.topic {
+  margin-top: 30px;
+}
+.topic-box {
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  margin-bottom: 30px;
+}
+.topic-box h2 {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+  margin-bottom: 0;
+  padding: 10px 20px;
+}
+.topic-box .topic-box-content {
+  padding: 20px;
+}
+.topic .comments {
+  margin-bottom: 30px;
+}
+.topic .comment-box {
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  padding: 10px;
+}
+.topic .comment-box:last-child {
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+.topic .comment-box .topic-box-content {
+  padding: 0 20px;
+}
+.topic .comment-box .user {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.topic .ui.form textarea {
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+.topic .ui.form button {
+  margin: 0 auto;
+  display: block;
+}
+/* Topic List page */
+.topic-list {
+  margin-top: -30px;
+}
+.topic-list h2 {
+  margin-bottom: 20px;
+}
+/* Log In */
+.log-in .to-signup {
+  margin-top: 30px;
+}
+.log-in .to-signup button {
+  margin-left: 15px;
+}
+/* form */
+button.center {
+  display: block !important;
+  margin: 0 auto !important;
+}
+.input-form {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.input-form
+  .ui.labeled.input:not([class*='corner labeled'])
+  .label:first-child {
+  width: 40px;
+}
+.input-form .ui.labeled.input {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.login .input-form .ui.labeled.input {
+  margin-bottom: 150px;
+}
+.input-form .ui.input > input {
+  max-width: calc(100% - 40px) !important;
+  width: calc(100% - 40px) !important;
+}
+.ui.form textarea,
+.ui.form input {
+  border-radius: 0 !important;
+}
+.ui.labeled.input .ui.label {
+  background-color: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.1);
+}
+.ui.labeled.input .ui.label > .icon {
+  margin: 0;
+}
+.ui.form.textarea label {
+  border-radius: 0;
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 10px;
+}
