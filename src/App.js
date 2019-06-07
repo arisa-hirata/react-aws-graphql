@@ -18,7 +18,6 @@ function App() {
         >
           Learn React
         </a>
-        {/* test */}
       </header>
     </div>
   );
