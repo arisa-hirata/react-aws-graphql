@@ -1,8 +1,15 @@
 /* breakpoints */
 /* below 768px
    768px - 991px
-   992px - 1200px	
+   992px - 1200px
    above 1200px */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+button {
+  font-family: 'Poppins', sans-serif !important;
+}
 
 header {
   border-bottom: 2px solid rgba(34, 36, 38, 0.15);
@@ -12,6 +19,7 @@ header {
   right: 0;
   background-color: #fff;
   z-index: 1000;
+  box-shadow: 5px 5px 10px #b7b7a9;
 }
 header .ui.secondary.pointing.menu {
   border: none;
@@ -21,19 +29,38 @@ header .right.menu {
   padding-bottom: 12px;
 }
 header .user {
-  width: 38px;
-  height: 38px;
-  background-color: grey;
-  border-radius: 50%;
+  width: 55px;
+  height: 55px;
 }
 header .search,
 header button,
 header .user {
   align-self: flex-end;
 }
-header button {
-  height: 38px;
+.btn {
+  height: 45px;
+  width: 120px;
   margin: 0 20px !important;
+  border-radius: 40px;
+  border: 3px solid #52ba47;
+  background: #fff;
+  font-weight: 700;
+  color: #52ba47;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  background: #52ba47;
+  color: #fff;
+}
+.logo {
+  width: 75%;
+}
+.search {
+  margin: 3px 0;
+}
+.prompt {
+  font-family: 'Poppins', sans-serif !important;
 }
 .two-column {
   display: flex !important;

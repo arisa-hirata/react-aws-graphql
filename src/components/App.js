@@ -16,11 +16,11 @@ const App = () => {
       <BrowserRouter>
         <Route>
           <Header />
-          <Route path='/signup' component={SignUp} />
-          <Route path='/login' component={LogIn} />
-          <Route path='/create-topic' component={CreateTopic} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/create-topic" component={CreateTopic} />
           <Route
-            path='/topic'
+            path="/topic"
             render={() => (
               <TwoColumn>
                 <Topic />
@@ -28,7 +28,7 @@ const App = () => {
             )}
           />
           <Route
-            path='/user'
+            path="/user"
             render={() => (
               <TwoColumn>
                 <User />
@@ -36,11 +36,11 @@ const App = () => {
             )}
           />
           <Route
-            path='/'
+            path="/"
             exact
             render={() => (
               <TwoColumn>
-                <TopicList title='Top Topics' />
+                <TopicList title="Top Topics" />
               </TwoColumn>
             )}
           />
