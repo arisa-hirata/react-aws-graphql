@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TopicContainerWithComment = ({ numberOfComent, content }) => {
   return (
-    <div className='topic-container-comment'>
-      <div className='comment'>
-        <div>
-          <strong>{numberOfComent}</strong>
+    <Link to='/topic' className='topic-link'>
+      <div className='topic-container-comment'>
+        <div className='comment'>
+          <div className='comment-number'>{numberOfComent}</div>
+          <span>Comments</span>
         </div>
-        <span>Comments</span>
+        {content}
       </div>
-      {content}
-    </div>
+    </Link>
   );
 };
 

@@ -44,12 +44,12 @@ const header = question => {
   return <h3>{question}</h3>;
 };
 
-const info = (date, name, image) => {
+const info = (date, name, image = null) => {
   return (
     <div className='info'>
       <span className='date'>Posted {date}</span>
       <span className='name'>{name}</span>
-      <div className='image'>{image}</div>
+      {image ? <div className='image'>{image}</div> : null}
     </div>
   );
 };

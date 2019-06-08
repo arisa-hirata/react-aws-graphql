@@ -6,7 +6,7 @@ const Main = props => {
     <main>
       <div className='create-button'>
         <Link to='/create-topic'>
-          <button className='ui red button right floated'>Create Topic</button>
+          <button className='ui btn button right floated'>Ask Question</button>
         </Link>
       </div>
       {props.children}

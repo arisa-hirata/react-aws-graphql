@@ -1,23 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <div className='sidebar'>
-      <Link to='/'>
-        <button className='positive ui button'>Home</button>
-      </Link>
-      <button className='positive ui button'>Tags</button>
-      <Link to='/signup'>signup</Link>
+      <NavLink to='/' exact>
+        Home
+      </NavLink>
+      <NavLink to='#'>Tags</NavLink>
+      {/* temporary nav start */}
       <br />
-      <Link to='/login'>login</Link>
+      <NavLink to='/signup'>signup</NavLink>
       <br />
-      <Link to='/create-topic'>create-topic</Link>
+      <NavLink to='/login'>login</NavLink>
       <br />
-      <Link to='/topic'>topic</Link>
+      <NavLink to='/create-topic'>create-topic</NavLink>
       <br />
-      <Link to='/user'>user</Link>
+      <NavLink to='/topic'>topic</NavLink>
       <br />
+      <NavLink to='/user'>user</NavLink>
+      <br />
+      {/* temporary nav end */}
     </div>
   );
 };
