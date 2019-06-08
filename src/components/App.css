@@ -35,8 +35,11 @@ h5,
 .ui.category.search > .results .category > .name {
   font-family: 'Poppins', sans-serif;
 }
+.loginBtn {
+  margin-top: 20px;
+}
 .btn {
-  border-radius: 40px !important;
+  border-radius: 30px !important;
   border: 3px solid #52ba47 !important;
   background: #fff !important;
   font-weight: 700 !important;
@@ -89,7 +92,7 @@ header .btn {
   width: 75%;
 }
 .search {
-  margin: 3px 0;
+  margin: 8px 0;
 }
 .prompt {
   font-family: 'Poppins', sans-serif !important;
@@ -141,8 +144,14 @@ main {
 
 /* Parts */
 /* Topic */
+.topic-box-content {
+  box-shadow: 5px 5px 10px #b7b7a9;
+}
 .topic-box-content .info {
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .topic-link {
   display: block;
@@ -187,6 +196,11 @@ main {
   font-weight: bold;
   margin-left: 15px;
 }
+.defaulticons {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
 
 /* Pages */
 /* One column */
@@ -222,6 +236,7 @@ main {
 }
 .topic-box {
   border: 1px solid rgba(34, 36, 38, 0.1);
+  box-shadow: 5px 5px 10px #b7b7a9;
   margin-bottom: 30px;
 }
 .topic-box h2 {
@@ -292,6 +307,17 @@ button.center {
 }
 .login .input-form .ui.labeled.input {
   margin-bottom: 150px;
+}
+.signup-link {
+  color: #52ba47;
+  font-weight: 700;
+}
+.signup-link:hover {
+  color: #2b7f22;
+}
+.mail,
+.key {
+  color: #000;
 }
 .input-form .ui.input > input {
   max-width: calc(100% - 40px) !important;

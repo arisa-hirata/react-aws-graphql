@@ -38,7 +38,9 @@ const Header = () => {
               </a>
             </div> */}
           </div>
-          <button className="btn">Log in</button>
+          <Link to="/login" className="loginBtn">
+            <button className="btn">Log in</button>
+          </Link>
           <Link to="/user" className="user">
             <img src={require('../img/defaultIcon.svg')} />
           </Link>
