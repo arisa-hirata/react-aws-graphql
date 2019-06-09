@@ -6,13 +6,7 @@ const TopicBoxContent = ({ body, tags = null, info, icon = null }) => {
     <div className="topic-box-content">
       {body}
       {tags ? <Tags tags={tags} /> : null}
-      <div className="info">
-        {info}
-        <img
-          src={icon ? icon : require('../img/defaultIcon.svg')}
-          className="defaulticons"
-        />
-      </div>
+      <div className="info">{info}</div>
     </div>
   );
 };

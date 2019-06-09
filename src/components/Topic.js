@@ -1,19 +1,19 @@
 import React from 'react';
-import TopicBoxContent from './TopicBoxContent';
+import TopicBox from './TopicBox';
 import CommentBox from './CommentBox';
 
 const Topic = () => {
   return (
-    <div className='topic'>
-      <div className='topic-box'>
+    <div className="topic">
+      <div className="topic-box">
         <h2>title</h2>
-        <TopicBoxContent
+        <TopicBox
           body={description('descriptiondescriptiondescription.')}
           tags={['dog', 'cat', 'mouse']}
-          info={info('May 25, 2019 23:43', 'User name')}
+          info={info('May 5, 2019 03:33', 'User name')}
         />
       </div>
-      <div className='comments'>
+      <div className="comments">
         <CommentBox
           name={'username'}
           image={'image'}
@@ -29,14 +29,14 @@ const Topic = () => {
           }
         />
       </div>
-      <div className='ui form textarea'>
-        <div className='field'>
+      <div className="ui form textarea">
+        <div className="field">
           <label>
-            <i className='pencil alternate icon' />
+            <i className="pencil alternate icon" />
             Comment
           </label>
-          <textarea />
-          <button className='positive ui button'>Send</button>
+          <textarea placeholder="Write your comment here..." />
+          <button className="btn">Send</button>
         </div>
       </div>
     </div>
@@ -49,10 +49,10 @@ const description = description => {
 
 const info = (date, name, image) => {
   return (
-    <div className='info'>
-      <span className='date'>Posted {date}</span>
-      <span className='name'>{name}</span>
-      <div className='image'>{image}</div>
+    <div className="info">
+      <span className="date">Posted {date}</span>
+      <span className="name">{name}</span>
+      <div className="image">{image}</div>
     </div>
   );
 };

@@ -22,6 +22,7 @@ h5,
 .ui.form input[type='password'],
 .ui.form input[type='text'],
 .ui.form input[type='file'],
+.ui.form textarea,
 .ui.menu,
 .ui.message .header,
 .ui.cards > .card > .content > .header,
@@ -39,6 +40,8 @@ h5,
   margin-top: 20px;
 }
 .btn {
+  height: 45px;
+  width: 120px;
   border-radius: 30px !important;
   border: 3px solid #52ba47 !important;
   background: #fff !important;
@@ -84,8 +87,6 @@ header .user {
   align-self: flex-end;
 }
 header .btn {
-  height: 45px;
-  width: 120px;
   margin: 0 20px !important;
 }
 .logo {
@@ -123,7 +124,7 @@ header .btn {
 }
 main {
   width: calc(100% - 164px);
-  border-left: 1px solid #d6d9dc;
+  border-left: 0.5px solid #d3d2c9;
   min-height: calc(100vh - 62px);
   padding: 2em 6em;
 }
@@ -144,21 +145,35 @@ main {
 
 /* Parts */
 /* Topic */
-.topic-box-content {
-  box-shadow: 5px 5px 10px #b7b7a9;
-}
 .topic-box-content .info {
   text-align: right;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+.topic-box-content div {
+  display: flex;
+}
+.topic-box-content-img {
+  width: 35%;
+  margin: 10px;
+}
+.topic-img {
+  width: 100%;
+  height: 100%;
+}
+.topic-box-content-desc {
+  width: 65%;
+  margin: 10px;
+}
+
 .topic-link {
   display: block;
 }
 .topic-container-comment {
   display: table;
   margin-bottom: 20px;
+  box-shadow: 5px 5px 10px #b7b7a9;
 }
 .topic-container-comment .comment {
   display: table-cell;
@@ -199,7 +214,7 @@ main {
 .defaulticons {
   width: 35px;
   height: 35px;
-  margin-left: 10px;
+  margin: 0px 10px 0px 10px;
 }
 
 /* Pages */
@@ -219,13 +234,17 @@ main {
   clear: both;
   overflow: hidden;
 }
+.create-button button {
+  width: 150px;
+}
 /* User page */
-.user-page .image {
+.user-page-img-container {
+  text-align: center;
+}
+.defaultImg {
   width: 250px;
   height: 250px;
-  background-color: grey;
   border-radius: 50%;
-  margin: 0 auto;
 }
 .user-page h2 {
   text-align: center;
@@ -235,14 +254,13 @@ main {
   margin-top: 30px;
 }
 .topic-box {
-  border: 1px solid rgba(34, 36, 38, 0.1);
   box-shadow: 5px 5px 10px #b7b7a9;
   margin-bottom: 30px;
 }
 .topic-box h2 {
-  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
   margin-bottom: 0;
   padding: 10px 20px;
+  background: #f9b7b7;
 }
 .topic-box .topic-box-content {
   padding: 20px;
@@ -263,6 +281,11 @@ main {
 .topic .comment-box .user {
   margin-bottom: 10px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.field label {
+  background: #f9b7b7;
 }
 .topic .ui.form textarea {
   border-radius: 0;
@@ -311,10 +334,12 @@ button.center {
 .signup-link {
   color: #52ba47;
   font-weight: 700;
+  transition: all 0.2s ease-in-out;
 }
 .signup-link:hover {
   color: #2b7f22;
 }
+.user,
 .mail,
 .key {
   color: #000;

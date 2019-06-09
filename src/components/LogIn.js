@@ -24,7 +24,7 @@ const LogIn = () => {
         <div className="to-signup">
           You don't have account?
           <Link to="/signup">
-            <span className="signup-link"> Sign Up</span>
+            <span className="signup-link"> &nbsp;&nbsp;Sign Up</span>
           </Link>
         </div>
       </div>

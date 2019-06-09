@@ -2,10 +2,15 @@ import React from 'react';
 import TopicBoxContent from './TopicBoxContent';
 import TopicContainerWithComment from './TopicContainerWithComment';
 
-const User = () => {
+const User = ({ image }) => {
   return (
-    <div className='user-page'>
-      <div className='image' />
+    <div className="user-page">
+      <div className="user-page-img-container">
+        <img
+          src={image ? image : require('../img/defaultIcon.svg')}
+          className="defaultImg"
+        />
+      </div>
       <h2>User Name</h2>
       <TopicContainerWithComment
         numberOfComent={5}
@@ -28,15 +33,15 @@ const header = question => {
 
 const info = date => {
   return (
-    <div className='info'>
-      <span className='date'>Posted {date}</span>
+    <div className="info">
+      <span className="date">Posted {date}</span>
     </div>
   );
 };
 
 const icon = id => {
   return (
-    <i onClick={() => handleDeleteClick(id)} className='trash alternate icon' />
+    <i onClick={() => handleDeleteClick(id)} className="trash alternate icon" />
   );
 };
 
