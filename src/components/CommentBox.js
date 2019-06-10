@@ -1,7 +1,7 @@
 import React from 'react';
 import TopicBoxContent from './TopicBoxContent';
 
-const CommentBox = ({ name, image, comment, icon = null }) => {
+const CommentBox = ({ name, image, comment, date, icon = null }) => {
   return (
     <div className="comment-box">
       <div className="user">
@@ -11,7 +11,7 @@ const CommentBox = ({ name, image, comment, icon = null }) => {
         />
         {name}
       </div>
-      <TopicBoxContent body={body(comment)} info={info('May 25, 2019 23:43')} />
+      <TopicBoxContent body={body(comment)} info={info(date)} />
     </div>
   );
 };

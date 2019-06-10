@@ -1,8 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import UserTopicBox from './UserTopicBox';
 import TopicContainerWithComment from './TopicContainerWithComment';
 
-const User = ({ image }) => {
+const User = ({ image, topics }) => {
   return (
     <div className="user-page">
       <div className="user-page-img-container">
@@ -12,17 +13,24 @@ const User = ({ image }) => {
         />
       </div>
       <h2>User Name</h2>
-      <TopicContainerWithComment
-        numberOfComent={5}
-        content={
-          <UserTopicBox
-            body={header('question')}
-            tags={['dog', 'cat', 'mouse']}
-            info={info('May 25, 2019 23:43')}
-            icon={icon(1)}
-          />
-        }
-      />
+      {topics
+        ? topics.map(topic => {
+            return (
+              <TopicContainerWithComment
+                key={topic.id}
+                numberOfComent={topic.commentsIDs.length}
+                content={
+                  <UserTopicBox
+                    body={header(topic.title)}
+                    tags={topic.tags}
+                    info={info(topic.date)}
+                    icon={icon(1)}
+                  />
+                }
+              />
+            );
+          })
+        : null}
     </div>
   );
 };
@@ -49,4 +57,8 @@ const handleDeleteClick = id => {
   console.log(id, 'delete');
 };
 
-export default User;
+const mapStateToProps = state => {
+  return { topics: state.topics };
+};
+
+export default connect(mapStateToProps)(User);

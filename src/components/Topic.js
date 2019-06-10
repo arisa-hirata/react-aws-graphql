@@ -1,34 +1,34 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import TopicBox from './TopicBox';
 import CommentBox from './CommentBox';
 
-const Topic = () => {
+const Topic = ({ topic }) => {
   return (
     <div className="topic">
       <div className="topic-box">
-        <h2>title</h2>
+        <h2>{topic.title}</h2>
         <TopicBox
-          body={description('descriptiondescriptiondescription.')}
-          tags={['dog', 'cat', 'mouse']}
-          info={info('May 5, 2019 03:33', 'User name')}
+          body={description(topic.description)}
+          tags={topic.tags}
+          info={info(topic.date, topic.username)}
         />
       </div>
-      <div className="comments">
-        <CommentBox
-          name={'username'}
-          image={'image'}
-          comment={
-            'descriptiondescriptiondescriptiondescriptiondescriptiondescription'
-          }
-        />
-        <CommentBox
-          name={'username'}
-          image={'image'}
-          comment={
-            'descriptiondescriptiondescriptiondescriptiondescriptiondescription'
-          }
-        />
-      </div>
+      {topic.comments ? (
+        <div className="comments">
+          {topic.comments.map(comment => {
+            return (
+              <CommentBox
+                key={comment.id}
+                name={comment.username}
+                image={'image'}
+                comment={comment.text}
+                date={comment.date}
+              />
+            );
+          })}
+        </div>
+      ) : null}
       <div className="ui form textarea">
         <div className="field">
           <label>
@@ -57,4 +57,10 @@ const info = (date, name, image) => {
   );
 };
 
-export default Topic;
+const mapStateToProps = ({ topic }) => {
+  return {
+    topic
+  };
+};
+
+export default connect(mapStateToProps)(Topic);
