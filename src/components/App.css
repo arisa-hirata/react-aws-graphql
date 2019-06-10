@@ -344,6 +344,12 @@ button.center {
 .key {
   color: #000;
 }
+.trash {
+  color: #b7b7a9;
+}
+.trash:hover {
+  color: #000;
+}
 .input-form .ui.input > input {
   max-width: calc(100% - 40px) !important;
   width: calc(100% - 40px) !important;

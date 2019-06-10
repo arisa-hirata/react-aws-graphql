@@ -1,5 +1,5 @@
 import React from 'react';
-import TopicBoxContent from './TopicBoxContent';
+import UserTopicBox from './UserTopicBox';
 import TopicContainerWithComment from './TopicContainerWithComment';
 
 const User = ({ image }) => {
@@ -15,7 +15,7 @@ const User = ({ image }) => {
       <TopicContainerWithComment
         numberOfComent={5}
         content={
-          <TopicBoxContent
+          <UserTopicBox
             body={header('question')}
             tags={['dog', 'cat', 'mouse']}
             info={info('May 25, 2019 23:43')}
