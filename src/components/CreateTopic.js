@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import OneColumn from './OneColumn';
 
-const CreateTopic = () => {
+const CreateTopic = ({ user }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [tags, setTags] = useState([]);
@@ -24,9 +25,12 @@ const CreateTopic = () => {
     let topic = {
       title,
       description,
-      tags: tagArray
+      tags: tagArray,
+      userId: user.id,
+      username: user.username,
+      postedDate: '',
+      image: null
     };
-    // access to dynamoDB
   };
 
   return (
@@ -67,4 +71,8 @@ const CreateTopic = () => {
   );
 };
 
-export default CreateTopic;
+const mapStateToProps = state => {
+  return { user: state.user };
+};
+
+export default connect(mapStateToProps)(CreateTopic);
