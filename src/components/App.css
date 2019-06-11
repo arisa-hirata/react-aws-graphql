@@ -372,3 +372,16 @@ button.center {
   margin-bottom: 0;
   padding: 10px;
 }
+.ui.form .add-image {
+  border: solid 2px #f9b7b7;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-weight: 600;
+  margin-bottom: 100px;
+}
+.ui.form .add-image:hover {
+  cursor: pointer;
+}
+.ui.form .add-image:focus {
+  outline: none;
+}

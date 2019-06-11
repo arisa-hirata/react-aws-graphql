@@ -63,6 +63,7 @@ const CreateTopic = ({ user }) => {
             onChange={onInputChange}
           />
         </div>
+        <button className="add-image">+ Add Image</button>
         <button onClick={createTopic} className="positive btn ui button center">
           Create
         </button>
