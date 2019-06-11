@@ -372,16 +372,36 @@ button.center {
   margin-bottom: 0;
   padding: 10px;
 }
-.ui.form .add-image {
-  border: solid 2px #f9b7b7;
-  border-radius: 10px;
-  padding: 5px 20px;
-  font-weight: 600;
-  margin-bottom: 100px;
+.ui.form input[type='file'] {
+  display: none;
 }
-.ui.form .add-image:hover {
+label.file-upload {
   cursor: pointer;
+  display: inline-block;
+  border: solid 2px #f9b7b7 !important;
+  border-radius: 10px !important;
+  padding: 5px 20px !important;
+  font-weight: 600 !important;
+  width: fit-content !important;
+  margin-bottom: 10px !important;
+  transition: all 0.2s ease-in-out;
+}
+.ui.form .file-name {
+  padding-left: 10px;
+}
+.ui.form .file-name i {
+  cursor: pointer;
+}
+label.file-upload:hover {
+  color: #fff !important;
+  background-color: #f9b7b7;
 }
 .ui.form .add-image:focus {
   outline: none;
+}
+.ui.form .topic-image {
+  width: 180px;
+}
+.topic-image-container {
+  margin-bottom: 50px;
 }

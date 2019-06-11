@@ -6,6 +6,8 @@ const CreateTopic = ({ user }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [tags, setTags] = useState([]);
+  const [image, setImage] = useState('');
+  const imageRef = React.createRef();
 
   const onInputChange = e => {
     if (e.target.id === 'title') {
@@ -31,6 +33,25 @@ const CreateTopic = ({ user }) => {
       postedDate: '',
       image: null
     };
+  };
+
+  const readURL = e => {
+    if (e.target.files && e.target.files[0]) {
+      let reader = new FileReader();
+      let name = e.target.files[0].name;
+
+      reader.onload = function(e) {
+        imageRef.current.src = e.target.result;
+        setImage(name);
+      };
+
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  };
+
+  const deleteFile = () => {
+    imageRef.current.src = '';
+    setImage('');
   };
 
   return (
@@ -63,8 +84,22 @@ const CreateTopic = ({ user }) => {
             onChange={onInputChange}
           />
         </div>
-        <button className="add-image">+ Add Image</button>
-        <button onClick={createTopic} className="positive btn ui button center">
+        <div className="file-input">
+          <label className="file-upload">
+            <input type="file" onChange={readURL} />
+            <div>+ Add Image</div>
+          </label>
+          {image ? (
+            <span className="file-name">
+              <i onClick={deleteFile} className="times circle icon" />
+              {image}
+            </span>
+          ) : null}
+        </div>
+        <div className="topic-image-container">
+          <img className="topic-image" ref={imageRef} src="" alt="" />
+        </div>
+        <button onClick={createTopic} className="btn ui button center">
           Create
         </button>
       </div>
