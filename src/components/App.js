@@ -9,6 +9,10 @@ import Topic from './Topic';
 import User from './User';
 import TopicList from './TopicList';
 import './App.css';
+import Amplify from 'aws-amplify';
+import aws_exports from '../aws-exports';
+import { withAuthenticator } from 'aws-amplify-react';
+Amplify.configure(aws_exports);
 
 const App = () => {
   return (
@@ -50,4 +54,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App, { includeGreeting: true });

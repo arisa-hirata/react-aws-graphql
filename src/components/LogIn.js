@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import OneColumn from './OneColumn';
+import Amplify from 'aws-amplify';
+import aws_exports from '../aws-exports';
+import { withAuthenticator } from 'aws-amplify-react';
+Amplify.configure(aws_exports);
 
 const LogIn = () => {
   const [email, setEmail] = useState('');
@@ -61,4 +65,5 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default withAuthenticator(LogIn, { includeGreeting: true });
+// export default LogIn;

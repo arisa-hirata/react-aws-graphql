@@ -1,0 +1,15 @@
+type Post @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  post: String!
+}
+# type Post @model {
+#   id: ID!
+#   title: String!
+#   blog: Blog @connection(name: "BlogPosts")
+#   comments: [Comment] @connection(name: "PostComments")
+# }
+# type Comment @model {
+#   id: ID!
+#   content: String
+#   post: Post @connection(name: "PostComments")
+# }

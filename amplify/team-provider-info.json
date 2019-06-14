@@ -1,0 +1,19 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "pawpaw-master-20190613145850-authRole",
+            "UnauthRoleArn": "arn:aws:iam::562074335804:role/pawpaw-master-20190613145850-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::562074335804:role/pawpaw-master-20190613145850-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "pawpaw-master-20190613145850-deployment",
+            "UnauthRoleName": "pawpaw-master-20190613145850-unauthRole",
+            "StackName": "pawpaw-master-20190613145850",
+            "StackId": "arn:aws:cloudformation:us-east-1:562074335804:stack/pawpaw-master-20190613145850/6d878450-8e26-11e9-8751-12d99c723360"
+        },
+        "categories": {
+            "auth": {
+                "pawpawe00d04c1": {}
+            }
+        }
+    }
+}
